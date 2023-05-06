@@ -37,47 +37,75 @@ def help_pannel(_, START: Union[bool, int] = None):
             ],
             [
                 InlineKeyboardButton(
-                    text="Bʀᴏᴀᴅᴄᴀsᴛ",
+                    text="Bʟᴏᴄᴋ Usᴇʀs",
                     callback_data="help_callback hb4",
                 ),
                 InlineKeyboardButton(
-                    text="G-Bᴀɴ",
-                    callback_data="help_callback hb12",
-                ),
-                InlineKeyboardButton(
-                    text="Lʏʀɪᴄs",
+                    text="Bʀᴏᴀᴅᴄᴀsᴛ",
                     callback_data="help_callback hb5",
                 ),
-            ],
-            [
                 InlineKeyboardButton(
-                    text="Pɪɴɢ",
-                    callback_data="help_callback hb7",
-                ),
-                InlineKeyboardButton(
-                    text="Pʟᴀʏ",
-                    callback_data="help_callback hb8",
-                ),
-                InlineKeyboardButton(
-                    text="Pʟᴀʏʟɪsᴛ",
+                    text="Exᴛʀᴀs",
                     callback_data="help_callback hb6",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="V-ᴄʜᴀᴛs",
-                    callback_data="help_callback hb10",
+                    text="Lʏʀɪᴄs",
+                    callback_data="help_callback hb7",
                 ),
                 InlineKeyboardButton(
-                    text="Sᴛᴀʀᴛ",
-                    callback_data="help_callback hb11",
+                    text="Pʟᴀʏʟɪsᴛ",
+                    callback_data="help_callback hb8",
                 ),
                 InlineKeyboardButton(
-                    text="Sᴜᴅᴏ",
+                    text="Pɪɴɢ",
                     callback_data="help_callback hb9",
                 ),
             ],
-            mark,
+            [
+                InlineKeyboardButton(
+                    text="C-Pʟᴀʏ",
+                    callback_data="help_callback hb10",
+                ),
+                InlineKeyboardButton(
+                    text="Sᴜᴅᴏᴇʀs",
+                    callback_data="help_callback hb11",
+                ),
+                InlineKeyboardButton(
+                    text="Hᴇʀᴏᴋᴜ",
+                    callback_data="help_callback hb12",
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Cᴏɴғɪɢ",
+                    callback_data="help_callback hb13",
+                ),
+                InlineKeyboardButton(
+                    text="Bᴏᴛ Cᴍɴᴅs",
+                    callback_data="help_callback hb14",
+                ),
+                InlineKeyboardButton(
+                    text="Pᴠᴛ Bᴏᴛ",
+                    callback_data="help_callback hb15",
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="V-Cʜᴀᴛs",
+                    callback_data="help_callback hb16",
+                ),
+                InlineKeyboardButton(
+                    text="Rᴇʙᴏᴏᴛ",
+                    callback_data="help_callback hb17",
+                ),
+                InlineKeyboardButton(
+                    text="G-Bᴀɴ",
+                    callback_data="help_callback hb18",
+                ),
+            ],
+          mark,
         ]
     )
     return upl
