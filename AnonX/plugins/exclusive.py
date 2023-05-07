@@ -58,7 +58,7 @@ async def exclusivers_private(
                 pass
         language = await get_lang(chat_id)
         _ = get_string(language)
-        keyboard = exclusive_pannel(_)
+        keyboard = help_pannel(_)
         await update.reply_photo(
             photo=config.START_IMG_URL,
             caption=_["exclusive_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard)
