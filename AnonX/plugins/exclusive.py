@@ -8,7 +8,7 @@ from config import BANNED_USERS
 from strings import get_command, get_string, helpers
 from AnonX import app
 from AnonX.misc import SUDOERS
-from AnonX.utils import exclusive_pannel
+from AnonX.utils import help_pannel
 from AnonX.utils.database import get_lang, is_commanddelete_on
 from AnonX.utils.decorators.language import (LanguageStart,
                                                   languageCB)
@@ -40,7 +40,7 @@ async def exclusivers_private(
         chat_id = update.message.chat.id
         language = await get_lang(chat_id)
         _ = get_string(language)
-        keyboard = exclusive_pannel(_, True)
+        keyboard = help_pannel(_, True)
         if update.message.photo:
             await update.edit_message_text(
                 _["exclusive_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
