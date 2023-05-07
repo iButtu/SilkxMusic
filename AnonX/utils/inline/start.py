@@ -17,6 +17,9 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             InlineKeyboardButton(
                 text="Hᴇʟᴘ",
                 callback_data="settings_back_helper",
+             InlineKeyboardButton(
+                text="Exᴄʟᴜsɪᴠᴇ",
+                callback_data="settings_back_exclusive",   
             ),
             InlineKeyboardButton(
                 text="Sᴇᴛᴛɪɴɢs", callback_data="settings_helper"
@@ -44,7 +47,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 text="Cᴏᴍᴍᴜɴɪᴛʏ", url=config.SUPPORT_GROUP
             ),
             InlineKeyboardButton(
-                text="Exᴄʟᴜsɪᴠᴇ", url=config.SUPPORT_GROUP
+                text="Exᴄʟᴜsɪᴠᴇ", callback_data="settings_back_exclusive"
             )
         ],
         [
