@@ -16,7 +16,7 @@ from AnonX.utils.inline.exclusive import (exclusive_back_markup,
                                           private_exclusive_panel)
 
 ### Command
-exclusive_COMMAND = get_command("exclusive_COMMAND")
+EXCLUSIVE_COMMAND = get_command("EXCLUSIVE_COMMAND")
 
 
 @app.on_message(
