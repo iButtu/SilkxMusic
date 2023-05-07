@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
 from config import BANNED_USERS
-from strings import get_command, get_string, exclusives
+from strings import get_command, get_string, exclusivers
 from AnonX import app
 from AnonX.misc import SUDOERS
 from AnonX.utils import exclusive_pannel
@@ -28,7 +28,7 @@ exclusive_COMMAND = get_command("exclusive_COMMAND")
 @app.on_callback_query(
     filters.regex("settings_back_exclusive") & ~BANNED_USERS
 )
-async def exclusive_private(
+async def exclusiveer_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
     is_callback = isinstance(update, types.CallbackQuery)
@@ -81,7 +81,7 @@ async def exclusive_com_group(client, message: Message, _):
 
 @app.on_callback_query(filters.regex("exclusive_callback") & ~BANNED_USERS)
 @languageCB
-async def exclusive_cb(client, CallbackQuery, _):
+async def exclusiveer_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = exclusive_back_markup(_)
@@ -92,7 +92,7 @@ async def exclusive_cb(client, CallbackQuery, _):
             )
         else:
             await CallbackQuery.edit_message_text(
-                exclusives.EXCLUSIVE_6, reply_markup=keyboard
+                exclusivers.EXCLUSIVE_6, reply_markup=keyboard
             )
             return await CallbackQuery.answer()
     try:
@@ -101,21 +101,21 @@ async def exclusive_cb(client, CallbackQuery, _):
         pass
     if cb == "ex1":
         await CallbackQuery.edit_message_text(
-            exclusives.EXCLUSIVE_1, reply_markup=keyboard
+            exclusivers.EXCLUSIVE_1, reply_markup=keyboard
         )
     elif cb == "ex2":
         await CallbackQuery.edit_message_text(
-            exclusives.EXCLUSIVE_2, reply_markup=keyboard
+            exclusivers.EXCLUSIVE_2, reply_markup=keyboard
         )
     elif cb == "ex3":
         await CallbackQuery.edit_message_text(
-            exclusives.EXCLUSIVE_3, reply_markup=keyboard
+            exclusivers.EXCLUSIVE_3, reply_markup=keyboard
         )
     elif cb == "ex4":
         await CallbackQuery.edit_message_text(
-            exclusives.EXCLUSIVE_4, reply_markup=keyboard
+            exclusivers.EXCLUSIVE_4, reply_markup=keyboard
         )
     elif cb == "ex5":
         await CallbackQuery.edit_message_text(
-            exclusives.EXCLUSIVE_5, reply_markup=keyboard
+            exclusivers.EXCLUSIVE_5, reply_markup=keyboard
         )
