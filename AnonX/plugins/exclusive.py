@@ -81,7 +81,7 @@ async def exclusive_com_group(client, message: Message, _):
 
 @app.on_callback_query(filters.regex("exclusive_callback") & ~BANNED_USERS)
 @languageCB
-async def exclusiveer_cb(client, CallbackQuery, _):
+async def exclusivers_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = exclusive_back_markup(_)
