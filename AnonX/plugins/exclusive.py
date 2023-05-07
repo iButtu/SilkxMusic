@@ -20,7 +20,7 @@ EXCLUSIVE_COMMAND = get_command("EXCLUSIVE_COMMAND")
 
 
 @app.on_message(
-    filters.command(exclusive_COMMAND)
+    filters.command(EXCLUSIVE_COMMAND)
     & filters.private
     & ~filters.edited
     & ~BANNED_USERS
@@ -28,7 +28,7 @@ EXCLUSIVE_COMMAND = get_command("EXCLUSIVE_COMMAND")
 @app.on_callback_query(
     filters.regex("settings_back_exclusive") & ~BANNED_USERS
 )
-async def exclusiveer_private(
+async def exclusivers_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
     is_callback = isinstance(update, types.CallbackQuery)
