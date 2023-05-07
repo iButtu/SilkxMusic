@@ -5,22 +5,22 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
 from config import BANNED_USERS
-from strings import get_command, get_string, helpers
+from strings import get_command, get_string, exclusives
 from AnonX import app
 from AnonX.misc import SUDOERS
-from AnonX.utils import help_pannel
+from AnonX.utils import exclusive_pannel
 from AnonX.utils.database import get_lang, is_commanddelete_on
 from AnonX.utils.decorators.language import (LanguageStart,
                                                   languageCB)
-from AnonX.utils.inline.help import (help_back_markup,
-                                          private_help_panel)
+from AnonX.utils.inline.exclusive import (exclusive_back_markup,
+                                          private_exclusive_panel)
 
 ### Command
-HELP_COMMAND = get_command("HELP_COMMAND")
+exclusive_COMMAND = get_command("exclusive_COMMAND")
 
 
 @app.on_message(
-    filters.command(HELP_COMMAND)
+    filters.command(exclusive_COMMAND)
     & filters.private
     & ~filters.edited
     & ~BANNED_USERS
@@ -28,7 +28,7 @@ HELP_COMMAND = get_command("HELP_COMMAND")
 @app.on_callback_query(
     filters.regex("settings_back_exclusive") & ~BANNED_USERS
 )
-async def helper_private(
+async def exclusive_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
     is_callback = isinstance(update, types.CallbackQuery)
@@ -40,7 +40,7 @@ async def helper_private(
         chat_id = update.message.chat.id
         language = await get_lang(chat_id)
         _ = get_string(language)
-        keyboard = help_pannel(_, True)
+        keyboard = exclusive_pannel(_, True)
         if update.message.photo:
             await update.edit_message_text(
                 _["exclusive_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
@@ -58,21 +58,21 @@ async def helper_private(
                 pass
         language = await get_lang(chat_id)
         _ = get_string(language)
-        keyboard = help_pannel(_)
+        keyboard = exclusive_pannel(_)
         await update.reply_photo(
             photo=config.START_IMG_URL,
             caption=_["exclusive_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard)
 
 
 @app.on_message(
-    filters.command(HELP_COMMAND)
+    filters.command(exclusive_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
 @LanguageStart
-async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel(_)
+async def exclusive_com_group(client, message: Message, _):
+    keyboard = private_exclusive_panel(_)
     await message.reply_photo(
         photo=config.START_IMG_URL,
         caption=_["exclusive_2"], reply_markup=InlineKeyboardMarkup(keyboard)
@@ -81,10 +81,10 @@ async def help_com_group(client, message: Message, _):
 
 @app.on_callback_query(filters.regex("exclusive_callback") & ~BANNED_USERS)
 @languageCB
-async def helper_cb(client, CallbackQuery, _):
+async def exclusive_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
-    keyboard = help_back_markup(_)
+    keyboard = exclusive_back_markup(_)
     if cb == "ex6":
         if CallbackQuery.from_user.id not in SUDOERS:
             return await CallbackQuery.answer(
@@ -92,7 +92,7 @@ async def helper_cb(client, CallbackQuery, _):
             )
         else:
             await CallbackQuery.edit_message_text(
-                helpers.EXCLUSIVE_6, reply_markup=keyboard
+                exclusives.EXCLUSIVE_6, reply_markup=keyboard
             )
             return await CallbackQuery.answer()
     try:
@@ -101,21 +101,21 @@ async def helper_cb(client, CallbackQuery, _):
         pass
     if cb == "ex1":
         await CallbackQuery.edit_message_text(
-            helpers.EXCLUSIVE_1, reply_markup=keyboard
+            exclusives.EXCLUSIVE_1, reply_markup=keyboard
         )
     elif cb == "ex2":
         await CallbackQuery.edit_message_text(
-            helpers.EXCLUSIVE_2, reply_markup=keyboard
+            exclusives.EXCLUSIVE_2, reply_markup=keyboard
         )
     elif cb == "ex3":
         await CallbackQuery.edit_message_text(
-            helpers.EXCLUSIVE_3, reply_markup=keyboard
+            exclusives.EXCLUSIVE_3, reply_markup=keyboard
         )
     elif cb == "ex4":
         await CallbackQuery.edit_message_text(
-            helpers.EXCLUSIVE_4, reply_markup=keyboard
+            exclusives.EXCLUSIVE_4, reply_markup=keyboard
         )
     elif cb == "ex5":
         await CallbackQuery.edit_message_text(
-            helpers.EXCLUSIVE_5, reply_markup=keyboard
+            exclusives.EXCLUSIVE_5, reply_markup=keyboard
         )
