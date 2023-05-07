@@ -61,7 +61,7 @@ def exclusive_back_markup(_):
             [
                 InlineKeyboardButton(
                     text=_["BACK_BUTTON"],
-                    callback_data=f"settings_back_exclusive",
+                    callback_data=f"settings_back_exclusivers",
                 ),
                 InlineKeyboardButton(
                     text=_["CLOSE_BUTTON"], callback_data=f"close"
@@ -77,7 +77,7 @@ def private_exclusive_panel(_):
         [
             InlineKeyboardButton(
                 text="Exᴄʟᴜsɪᴠᴇ",
-                callback_data="settings_back_exclusive",
+                callback_data="settings_back_exclusivers",
             ),
         ],
     ]
