@@ -12,7 +12,7 @@ def help_pannel(_, START: Union[bool, int] = None):
     second = [
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
-            callback_data=f"settingsback_helper",
+            callback_data=f"settingsback_exclusive",
         ),
         InlineKeyboardButton(
             text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
@@ -24,85 +24,29 @@ def help_pannel(_, START: Union[bool, int] = None):
             [
                 InlineKeyboardButton(
                     text="Aᴅᴍɪɴ",
-                    callback_data="help_callback hb1",
+                    callback_data="exclusive_callback ex1",
                 ),
                 InlineKeyboardButton(
                     text="Aᴜᴛʜ",
-                    callback_data="help_callback hb2",
+                    callback_data="exclusive_callback ex2",
                 ),
                 InlineKeyboardButton(
                     text="Bʟᴋ-Lɪsᴛ",
-                    callback_data="help_callback hb3",
+                    callback_data="exclusive_callback ex3",
                 ),
             ],
             [
                 InlineKeyboardButton(
                     text="Bʟᴏᴄᴋᴇʀs",
-                    callback_data="help_callback hb4",
+                    callback_data="exclusive_callback ex4",
                 ),
                 InlineKeyboardButton(
                     text="Bʀᴏᴀᴅᴄᴀsᴛ",
-                    callback_data="help_callback hb5",
+                    callback_data="exclusive_callback ex5",
                 ),
                 InlineKeyboardButton(
                     text="Exᴛʀᴀs",
-                    callback_data="help_callback hb6",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Lʏʀɪᴄs",
-                    callback_data="help_callback hb7",
-                ),
-                InlineKeyboardButton(
-                    text="Pʟᴀʏʟɪsᴛ",
-                    callback_data="help_callback hb8",
-                ),
-                InlineKeyboardButton(
-                    text="Pɪɴɢ",
-                    callback_data="help_callback hb9",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="C-Pʟᴀʏ",
-                    callback_data="help_callback hb10",
-                ),
-                InlineKeyboardButton(
-                    text="Sᴜᴅᴏᴇʀs",
-                    callback_data="help_callback hb11",
-                ),
-                InlineKeyboardButton(
-                    text="Hᴇʀᴏᴋᴜ",
-                    callback_data="help_callback hb12",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Cᴏɴғɪɢ",
-                    callback_data="help_callback hb13",
-                ),
-                InlineKeyboardButton(
-                    text="Bᴏᴛ Cᴍɴᴅs",
-                    callback_data="help_callback hb14",
-                ),
-                InlineKeyboardButton(
-                    text="Pᴠᴛ Bᴏᴛ",
-                    callback_data="help_callback hb15",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="V-Cʜᴀᴛs",
-                    callback_data="help_callback hb16",
-                ),
-                InlineKeyboardButton(
-                    text="Rᴇʙᴏᴏᴛ",
-                    callback_data="help_callback hb17",
-                ),
-                InlineKeyboardButton(
-                    text="G-Bᴀɴ",
-                    callback_data="help_callback hb18",
+                    callback_data="exclusive_callback ex6",
                 ),
             ],
           mark,
@@ -117,7 +61,7 @@ def help_back_markup(_):
             [
                 InlineKeyboardButton(
                     text=_["BACK_BUTTON"],
-                    callback_data=f"settings_back_helper",
+                    callback_data=f"settings_back_exclusive",
                 ),
                 InlineKeyboardButton(
                     text=_["CLOSE_BUTTON"], callback_data=f"close"
@@ -132,8 +76,8 @@ def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="Hᴇʟᴘ",
-                callback_data="settings_back_helper",
+                text="Exᴄʟᴜsɪᴠᴇ",
+                callback_data="settings_back_exclusive",
             ),
         ],
     ]
