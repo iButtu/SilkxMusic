@@ -201,11 +201,3 @@ HELP_18 = """**<u>Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ G-Bᴀɴ Mᴏᴅᴜʟᴇ 
 /ungban [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] : ɢʟᴏʙᴀʟʟʏ ᴜɴʙᴀɴs ᴛʜᴇ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ.
 
 /gbannedusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇʀ ᴜsᴇʀs."""
-
-HELP_19 = """**<u>Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tʀᴜᴛʜ/Dᴀʀᴇ Mᴏᴅᴜʟᴇ ♡</u>**
-
-**<u>Tʀᴜᴛʜ/Dᴀʀᴇ :</u>**
-
-/truth : Sends a random truth string.
-
-/dare : Sends a random dare string."""
