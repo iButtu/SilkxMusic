@@ -104,10 +104,6 @@ def help_pannel(_, START: Union[bool, int] = None):
                     text="G-Bᴀɴ",
                     callback_data="help_callback hb18",
                 ),
-                 InlineKeyboardButton(
-                    text="Tʀᴜᴛʜ/Dᴀʀᴇ",
-                    callback_data="help_callback hb19",
-                ),
             ],
           mark,
         ]
