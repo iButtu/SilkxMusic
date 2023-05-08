@@ -68,6 +68,9 @@ async def gen_thumb(videoid, user_id):
         try:
             wxyz = await app.get_profile_photos(user_id)
             wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+        try:
+            wxyz = await app.get_profile_photos(chat_id)
+            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{chat_id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)
             wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
